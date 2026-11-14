@@ -10,12 +10,7 @@ class ArticleController extends Controller
 {
     public function list(): View
     {
-        $articles = Article::with('category')
-            ->latest()
-            ->orderByDesc('id')
-            ->paginate(12);
-
-        return view('articles.index', ['articles' => $articles]);
+        return view('articles.index');
     }
 
     public function show(Article $article): View
