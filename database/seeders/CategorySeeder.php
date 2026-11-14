@@ -12,9 +12,10 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory()
-            ->count(5)
-            ->hasArticles(4) // Creates 4 articles for each of the 5 categories
-            ->create();
+        foreach (['Premier League', 'Champions League', 'International Football', 'Transfer News', 'Football Analysis'] as $name) {
+            Category::factory()
+                ->hasArticles(4)
+                ->create(['name' => $name]);
+        }
     }
 }

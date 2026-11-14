@@ -1,16 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Latest stories | Northline')
+@section('title', 'Latest stories | Football Articles')
 
 @section('content')
-    <main class="container py-5">
-        <header class="d-flex justify-content-between align-items-end border-bottom border-dark pb-3 mb-4">
-            <div>
-                <p class="text-uppercase small text-danger mb-2">STAR EVAL · Independent stories</p>
-                <h1 class="display-5 fw-semibold mb-0">Latest stories</h1>
-            </div>
-
-            <span class="text-secondary small d-none d-md-block">The daily edition</span>
+    <main id="main-content" class="container publication">
+        <header class="publication-header">
+            <p class="publication-name">STAR EVAL <span class="publication-section">/ Football</span></p>
+            <h1 class="publication-title">Latest stories</h1>
         </header>
 
         <livewire:article-list />

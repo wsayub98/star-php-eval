@@ -8,6 +8,7 @@
     @livewireStyles
 </head>
 <body>
+    <a class="visually-hidden-focusable d-inline-block p-2" href="#main-content">Skip to content</a>
     @yield('content')
 
     @livewireScripts

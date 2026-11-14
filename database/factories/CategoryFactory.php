@@ -18,7 +18,13 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->word(),
+            'name' => fake()->randomElement([
+                'Premier League',
+                'Champions League',
+                'International Football',
+                'Transfer News',
+                'Football Analysis',
+            ]),
         ];
     }
 }
